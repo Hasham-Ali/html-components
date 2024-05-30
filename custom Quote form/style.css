@@ -1,0 +1,295 @@
+
+.btn-col{
+    text-align: center;
+}
+.sub-header{
+display: block;
+margin-left: 10px;
+color: #2C3E50;
+text-align: center;
+}
+.header-col{
+    text-align: center;
+}
+.header-row-quote{
+color: #161616;
+/*background-color: white;*/
+    height: 60px;
+    padding-top: 10px;
+}
+.header-row-quote .col-sm-6{
+    /*padding: 10px;*/
+    /*box-shadow: 0 0 15px 1px rgba(0, 0, 0, 0.4);*/
+    /*background-color: white;*/
+}
+.form-row{
+    /*margin-top: 15px;*/
+    padding-right: 15px;
+}
+.travel-label{
+    padding: 0px;
+    padding-top: 7px;
+}
+@media (max-width: 788px) {
+  .form-row{
+    padding-left: 15px;
+  }
+}
+.custom-checkbox{
+    text-align: center;
+}
+small{
+    margin-top: 15px;
+    display: block;
+}
+
+/*form styles*/
+#msform {
+text-align: center;
+position: relative;
+margin-top: 30px;
+}
+
+#msform fieldset {
+background: white;
+border: 0 none;
+border-radius: 0px;
+box-shadow: 0 0 15px 1px rgba(0, 0, 0, 0.4);
+padding: 20px 30px;
+box-sizing: border-box;
+width: 80%;
+margin: 0 10%;
+
+/*stacking fieldsets above each other*/
+position: relative;
+}
+
+/*Hide all except first fieldset*/
+#msform fieldset:not(:first-of-type) {
+display: none;
+}
+
+/*inputs*/
+#msform input, #msform textarea, #msform select{
+padding: 15px;
+border: 1px solid #ccc;
+border-radius: 0px;
+margin-bottom: 10px;
+width: 100%;
+box-sizing: border-box;
+color: #2C3E50;
+font-size: 13px;
+}
+
+#msform select{
+height: 50px;
+}
+
+#msform input:focus, #msform textarea:focus {
+-moz-box-shadow: none !important;
+-webkit-box-shadow: none !important;
+box-shadow: none !important;
+border: 1px solid #07549c;
+outline-width: 0;
+transition: All 0.5s ease-in;
+-webkit-transition: All 0.5s ease-in;
+-moz-transition: All 0.5s ease-in;
+-o-transition: All 0.5s ease-in;
+}
+
+/*buttons*/
+#msform .action-button {
+width: 100px;
+background: #07549c;
+font-weight: bold;
+color: white;
+border: 0 none;
+border-radius: 25px;
+cursor: pointer;
+padding: 10px 5px;
+margin: 10px 5px;
+}
+
+#msform .action-button:hover, #msform .action-button:focus {
+box-shadow: 0 0 0 2px white, 0 0 0 3px #07549c;
+}
+
+#msform .action-button-previous {
+width: 100px;
+background: #C5C5F1;
+font-weight: bold;
+color: white;
+border: 0 none;
+border-radius: 25px;
+cursor: pointer;
+padding: 10px 5px;
+margin: 10px 5px;
+}
+
+#msform .action-button-previous:hover, #msform .action-button-previous:focus {
+box-shadow: 0 0 0 2px white, 0 0 0 3px #C5C5F1;
+}
+
+/*headings*/
+.fs-title {
+font-size: 18px;
+text-transform: uppercase;
+color: #2C3E50;
+margin-bottom: 10px;
+letter-spacing: 2px;
+font-weight: bold;
+}
+
+.fs-subtitle {
+font-weight: normal;
+font-size: 13px;
+color: #666;
+margin-bottom: 20px;
+}
+
+/*progressbar*/
+#progressbar {
+margin-bottom: 30px;
+overflow: hidden;
+/*CSS counters to number the steps*/
+counter-reset: step;
+padding-top: 15px;
+}
+
+#progressbar li {
+list-style-type: none;
+/*color: white;*/
+text-transform: uppercase;
+font-size: 12px;
+width: 24.33%;
+float: left;
+position: relative;
+letter-spacing: 1px;
+}
+
+#progressbar li:before {
+content: counter(step);
+counter-increment: step;
+width: 40px;
+height: 40px;
+line-height: 39px;
+display: block;
+font-size: 15px;
+color: #333;
+background: white;
+border-radius: 25px;
+margin: 0 auto 10px auto;
+}
+
+/*progressbar connectors*/
+#progressbar li:after {
+content: '';
+width: 100%;
+height: 2px;
+background: white;
+position: absolute;
+left: -50%;
+top: 9px;
+z-index: -1; /*put it behind the numbers*/
+}
+
+#progressbar li:first-child:after {
+/*connector not needed before the first step*/
+content: none;
+}
+
+/*marking active/completed steps green*/
+/*The number of the step and the connector before it = green*/
+#progressbar li.active:before, #progressbar li.active:after {
+background: #07549c;
+color: white;
+}
+
+.control-label{
+float: left;
+}
+
+.date-label{
+font-weight: 500;
+color: #5a5a5a;
+}
+
+.check-group{
+color: #5a5a5a;
+margin-top: 10px;
+}
+
+.form-group{
+margin-bottom: 0px;
+padding-right: 0px;
+}
+
+.form-check-input{
+width: auto !important;
+}
+
+.sub-sub{
+margin-top: 0;
+line-height: inherit;
+padding: 0px 10%;
+margin-bottom: 0px;
+}
+
+.form-check-inline{
+display: inline-block;
+width: auto;
+}
+
+.form-check-inline .form-check-label{
+font-weight: 500;
+margin: 5px 3px;
+}
+
+.sub-label{
+padding: 0;
+text-align: left;
+margin-bottom: 10px;
+padding-left: 7px;
+font-weight: 600;
+margin-top: 25px;
+font-size: 15px;
+}
+
+small{
+text-align: left;
+padding-left: 7px;
+color: #666666;
+margin-top: 0px;
+}
+
+.checks{
+text-align: left;
+}
+
+.thanks-copy{
+padding: 0px 15%;
+text-align: center;
+}
+
+.req-errors{
+color: #dc1125;
+}
+.bigform {
+padding: 50px 25px;
+background: #eceeef;
+max-width:800px;
+margin:auto;
+}
+
+@media (max-width: 767px){
+    #msform{
+        margin-top: 60px;
+    }
+    #msform fieldset{
+        width: 100%;
+        margin: 0px !important
+    }
+}
+.form-check-input {
+margin-top: 0.7rem;
+}

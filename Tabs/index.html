@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+        integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+</head>
+
+<style>
+    body {
+        -webkit-user-select: none;
+        /* Safari */
+        -ms-user-select: none;
+        /* IE 10 and IE 11 */
+        user-select: none;
+        /* Standard syntax */
+    }
+
+    .hideme {
+        background-color: blanchedalmond;
+        padding: 50px 4px;
+        width: 100px;
+    }
+
+    .showme {
+        background-color: cadetblue;
+        padding: 50px 4px;
+        width: 100px;
+    }
+
+    .items p {
+        width: 300px;
+        height: 265px;
+        text-align: center;
+        border: 2px solid #555;
+        padding: 20px;
+        margin: 20px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        font-size: 16px;
+        transition: 0.4s all;
+        position: relative;
+        background-color: rgb(0, 0, 0);
+        border-radius: 30px;
+    }
+
+    /* .items .l1:first-child p:after {
+        position: absolute;
+        content: "Part 1";
+        width: 340px;
+        height: 305px;
+        top: 0;
+        left: 0;
+        color: #fff;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        font-size: 26px;
+        color: red;
+    }
+
+    .items .l1:nth-child(2) p:after {
+        position: absolute;
+        content: "Part 2";
+        width: 340px;
+        height: 305px;
+        top: 0;
+        left: 0;
+        color: #fff;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .items .l1:nth-child(3) p:after {
+        position: absolute;
+        content: "Part 3";
+        width: 340px;
+        height: 305px;
+        top: 0;
+        left: 0;
+        color: #fff;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .items .l1:last-child p:after {
+        position: absolute;
+        content: "Part 4";
+        width: 340px;
+        height: 305px;
+        top: 0;
+        left: 0;
+        color: #fff;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    } */
+
+    .items {
+        justify-content: center;
+        display: flex;
+        transition: 0.4s all;
+    }
+
+    .btn-box {
+        margin: 0 auto;
+        width: 400px;
+        text-align: center;
+        margin-bottom: 100px;
+    }
+
+    .tab-sec {
+        height: 100vh;
+    }
+
+    /* 
+    .l1 {
+        filter: blur(8px);
+        -webkit-filter: blur(8px);
+    } */
+    .bg-text {
+        color: white;
+        font-weight: bold;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 2;
+        width: 100%;
+        height: 100%;
+        margin: 44px;
+        display: flex;
+        padding: 20px;
+        text-align: center;
+        flex-direction: column;
+        justify-content: center;
+        font-size: 22px;
+        text-transform: capitalize;
+    }
+
+    .l1 {
+        width: 300px;
+        height: 265px;
+        position: relative;
+        margin: 50px;
+    }
+
+    .l2 {
+        width: 300px;
+        height: 265px;
+        position: relative;
+        margin: 50px;
+    }
+
+    .l3 {
+        width: 300px;
+        height: 265px;
+        position: relative;
+        margin: 50px;
+    }
+
+    .l4 {
+        width: 300px;
+        height: 265px;
+        position: relative;
+        margin: 50px;
+    }
+
+    #myProgress {
+        width: 100%;
+        background-color: grey;
+    }
+
+    #myBar {
+        width: 1%;
+        height: 30px;
+        background-color: green;
+    }
+</style>
+
+<body>
+
+    <section  class="tab-sec">
+        <div class="btn-box">
+            <h2 class="pera">Tabs</h2>
+            <button class="text1">Step 1</button>
+            <button class="text2">Step 2</button>
+            <button class="text3">Step 3</button>
+            <button class="text4">Step 4</button>
+            <h3 class="pera">Press Enter for all tabs</h3>
+        </div>
+
+        <div class="items">
+            <div class="l1">
+                <p class="para1">1 -Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when
+                    an
+                    unknown
+                    printer took a galley of type and scrambled it to make a type specimen book. It has survived not
+                    only
+                    five
+                    centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was
+                    popularised in
+                    the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently
+                    with
+                    desktop
+                    publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+                <span class="bg-text">Step 1</span>
+
+            </div>
+            <div class="l2">
+                <p class="para2">2 -Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when
+                    an
+                    unknown
+                    printer took a galley of type and scrambled it to make a type specimen book. It has survived not
+                    only
+                    five
+                    centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was
+                    popularised in
+                    the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently
+                    with
+                    desktop
+                    publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+                <span class="bg-text">Step 2</span>
+
+            </div>
+            <div class="l3">
+                <p class="para3">3 -Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when
+                    an
+                    unknown
+                    printer took a galley of type and scrambled it to make a type specimen book. It has survived not
+                    only
+                    five
+                    centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was
+                    popularised in
+                    the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently
+                    with
+                    desktop
+                    publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+                <span class="bg-text">Step 3</span>
+
+            </div>
+            <div class="l4">
+                <p class="para4">4 -Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when
+                    an
+                    unknown
+                    printer took a galley of type and scrambled it to make a type specimen book. It has survived not
+                    only
+                    five
+                    centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was
+                    popularised in
+                    the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently
+                    with
+                    desktop
+                    publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+                <span class="bg-text">Step 4</span>
+            </div>
+        </div>
+    </section>
+
+    <div id="myProgress">
+        <div id="myBar"></div>
+    </div>
+</body>
+
+<script>
+
+
+    var i = 0;
+    function move() {
+        if (i == 0) {
+            i = 1;
+            var elem = document.getElementById("myBar");
+            var width = 1;
+            var id = setInterval(frame, 10);
+            function frame() {
+                if (width >= 100) {
+                    clearInterval(id);
+                    i = 0;
+                } else {
+                    width++;
+                    elem.style.width = width + "%";
+                }
+            }
+        }
+    }
+
+
+
+    $(document).ready(function () {
+        // $("button").click(function () {
+        //     $(this).hide();
+        // });
+
+        $("body").dblclick(function () {
+            $("p").css({ "color": "#000", "box-shadow": "0px 0px 0px 0px #fff0", "transform": "none", "background-color": "#000", })
+            $(".l1 .bg-text").show();
+            $(".l2 .bg-text").show();
+            $(".l3 .bg-text").show();
+            $(".l4 .bg-text").show();
+        });
+        $(".text1").click(function () {
+            $("p").css({ "color": "#000", "box-shadow": "0px 0px 0px 0px #fff0", "transform": "none", "background-color": "#000", });
+            $(".para1").css({ "color": "#000", "box-shadow": "7px 10px 4px oklch(0 0 0 / .16)", "transform": "scale(1.1)", "background-color": "#fff", });
+            $(".l1 .bg-text").hide();
+            $(".l2 .bg-text").show();
+            $(".l3 .bg-text").show();
+            $(".l4 .bg-text").show();
+            // $(".para1").show();
+        });
+        $(".text2").click(function () {
+            $("p").css({ "color": "#000", "box-shadow": "0px 0px 0px 0px #fff0", "transform": "none", "background-color": "#000" });
+            $(".para2").css({ "color": "#000", "box-shadow": "7px 10px 4px oklch(0 0 0 / .16)", "transform": "scale(1.1)", "background-color": "#fff", });
+            $(".l2 .bg-text").hide();
+            $(".l1 .bg-text").show();
+            $(".l3 .bg-text").show();
+            $(".l4 .bg-text").show();
+
+            // $(".para2").show();
+        });
+        $(".text3").click(function () {
+            $("p").css({ "color": "#000", "box-shadow": "0px 0px 0px 0px #fff0", "transform": "none", "background-color": "#000" });
+            $(".para3").css({ "color": "#000", "box-shadow": "7px 10px 4px oklch(0 0 0 / .16)", "transform": "scale(1.1)", "background-color": "#fff", });
+            $(".l3 .bg-text").hide();
+            $(".l1 .bg-text").show();
+            $(".l2 .bg-text").show();
+            $(".l4 .bg-text").show();
+            // $(".para3").show();
+        });
+        $(".text4").click(function () {
+            $("p").css({ "color": "#000", "box-shadow": "0px 0px 0px 0px #fff0", "transform": "none", "background-color": "#000" });
+            $(".para4").css({ "color": "#000", "box-shadow": "7px 10px 4px oklch(0 0 0 / .16)", "transform": "scale(1.1)", "background-color": "#fff", });
+            $(".l4 .bg-text").hide();
+            $(".l1 .bg-text").show();
+            $(".l2 .bg-text").show();
+            $(".l3 .bg-text").show();
+            // $(".para4").show();
+        });
+    });
+    $(document).on("keypress", function (e) {
+        if (e.which == 13) {
+            $("p").css({ "color": "#000", "box-shadow": "0px 0px 0px 0px #fff0", "transform": "none", "background-color": "#000" });
+            $(".para4").css({ "color": "#000", "box-shadow": "7px 10px 4px oklch(0 0 0 / .16)", "transform": "scale(1.1)", "background-color": "#fff", });
+            $(".para3").css({ "color": "#000", "box-shadow": "7px 10px 4px oklch(0 0 0 / .16)", "transform": "scale(1.1)", "background-color": "#fff", });
+            $(".para2").css({ "color": "#000", "box-shadow": "7px 10px 4px oklch(0 0 0 / .16)", "transform": "scale(1.1)", "background-color": "#fff", });
+            $(".para1").css({ "color": "#000", "box-shadow": "7px 10px 4px oklch(0 0 0 / .16)", "transform": "scale(1.1)", "background-color": "#fff", });
+            $(".l4 .bg-text").hide();
+            $(".l1 .bg-text").hide();
+            $(".l2 .bg-text").hide();
+            $(".l3 .bg-text").hide();
+        }
+        else {
+            window.alert("wrong Key")
+        }
+    });
+
+</script>
+
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        background: #e5e9f4;
+    }
+
+    button.Neumorphic-btn {
+        padding: 30px 50px;
+        font-size: 20px;
+        background: #e5e9f4;
+        border-radius: 20px;
+        box-shadow: -10px -10px 20px #ffffffa1, 6px 6px 14px #bcbcbc;
+        border: 8px solid transparent;
+        transition: 0.2s all;
+        margin: 20px 0px;
+    }
+    button.active {
+        padding: 30px 50px;
+        font-size: 20px;
+        background: #e5e9f4;
+        border-radius: 20px;
+        color: red !important;
+        box-shadow: inset -8px -8px 14px #ffffffa1, inset 6px 6px 14px #bcbcbc, -10px -10px 20px #ffffffa1, 7px 7px 18px #bcbcbc;
+        border: 8px solid transparent;
+        transition: 0.2s all;
+        margin: 20px 0px;
+    }
+
+    button.Neumorphic-btn:Hover {
+        scale: 1.1;
+        color: red !important;
+    }
+    button.Neumorphic-btn:active {
+    box-shadow: inset -8px -8px 14px #ffffffa1, inset 6px 6px 14px #bcbcbc, -10px -10px 20px #ffffffa1, 7px 7px 18px #bcbcbc;
+    color: red !important;
+    }
+</style>
+
+<body>
+    <button class="Neumorphic-btn active">Active</button>
+    <button class="Neumorphic-btn">Click Me</button>
+    <button class="Neumorphic-btn">Click Me</button>
+    <button class="Neumorphic-btn">Click Me</button>
+</body>
+
+</html>
